@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+
+  <input type="text" placeholder="id" id="A">
+ <input type="text" name="first_name" id="B" value="first_name">
+ <input type="text" name="last_name" id="C" value="last_name">
+ <input type="file" name="image_url" id="D" value="image_url">
+ <button onclick="CL()">submit</button>
+</body>
+</html>
+<script type = "module">
+ document.getElementById("o").innerHTML="fvadnkfjna"
+function CL() {
+ document.getElementById("A").value = a
+ document.getElementById("B").value = b
+ document.getElementById("C").value = c
+ document.getElementById("D").value = d
+ console.log(a,b,c,d);
+
+}
+ const patchData = async (
+  url = `http://localhost:2346/user/${}`,
+  data = O
+) => {
+
+  const response = await fetch(url, {
+    method: 'PATCH',
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    // Body data type must match "Content-Type" header
+    body: JSON.stringify(data),
+  })
+
+  try {
+    const newData = await response.json()
+    // console.log(newData)
+    return newData
+  } catch (error) {
+    console.log('error', error)
+  }
+}
+</script>

@@ -1,0 +1,19 @@
+{
+  "name": "new11_validation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express-validator": "^6.12.2",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server":"nodemon src/server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
