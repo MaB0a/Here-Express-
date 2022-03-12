@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="postData()">post</button>
+</body>
+</html>
+<script>
+    const postData = async ( url = 'http://localhost:2345/products', data = {
+        title:"lopa",price:445
+    })=>{
+    console.log(data);
+      const response = await fetch(url, {
+      method: 'POST', 
+      credentials: 'same-origin',
+      headers: {
+          'Content-Type': 'application/json',
+          "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJtZSIsImVtYWlsIjoibUBhLmNvbSIsInBhc3N3b3JkIjoiJDJhJDA4JEtoN1NFWlBlVXhiYXZvVTRvakVlcy4zay55eGM5ZGl6SFc0azdPVmxZZW1yd09BVWI3SkF5IiwiX2lkIjoiNjIyOWI2MDdhM2VjNzZjNWE2OWQ3NWEwIiwiY3JlYXRlZEF0IjoiMjAyMi0wMy0xMFQwODoyNTo0My43MzZaIiwidXBkYXRlZEF0IjoiMjAyMi0wMy0xMFQwODoyNTo0My43MzZaIn0sImlhdCI6MTY0NjkwMDc0M30.WHQxC4Mh_rKcZLmzpxRUlHQVv1n_k8rLLHt1i-POc4c"
+      },
+     // Body data type must match "Content-Type" header        
+      body: JSON.stringify(data), 
+    });
+
+      try {
+        const newData = await response.json();
+        console.log(newData);
+        return newData;
+      }catch(error) {
+      console.log("error", error);
+      }
+  }
+</script>

@@ -1,7 +1,7 @@
 const express = require('express');
 const {register,login}= require("./controller/auth.controller")
 const productController = require('./controller/product.controller')
-const userController = require('./controller/user.controller')
+// const userController = require('./controller/user.controller')
 const postController = require('./controller/post.controller')
 
 const app = express();

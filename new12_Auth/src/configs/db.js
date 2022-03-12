@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
 
 module.exports = () => {
- return mongoose.connect("mongodb://127.0.0.1:27017/test9")
+ return mongoose.connect("mongodb+srv://Manney:9026724930@cluster.1o8px.mongodb.net/useAuth?retryWrites=true&w=majority")
 }
